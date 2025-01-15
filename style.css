@@ -58,3 +58,13 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+body.light-theme {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+body.dark-theme {
+    background-color: #1e1e1e;
+    color: #f4f4f9;
+}

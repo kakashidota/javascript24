@@ -72,3 +72,44 @@ addHobbyButton.addEventListener("click", function(){
     }
 });
 
+const clearHobbiesButton = document.getElementById("clear-hobbies-button");
+
+clearHobbiesButton.addEventListener("click", function(){
+    hobbyList.innerHTML = "";
+});
+
+const  changeThemeButton = document.getElementById("change-theme-button");
+
+changeThemeButton.addEventListener("click", function(){
+    document.body.classList.toggle("dark-theme");
+    document.body.classList.toggle("light-theme");
+
+    if(document.body.classList.contains("dark-theme")){
+        changeThemeButton.textContent = "Switch to light theme";
+    } else {
+        changeThemeButton.textContent = "Swith to dark theme";
+    }
+});
+
+document.body.classList.add("light-theme");
+
+const initialHobbies = ["Potaits", "Dancing", "gaming", "fan vet jag", "zumba", "rumba"];
+
+window.addEventListener("DOMContentLoaded", function(){
+    initialHobbies.forEach(function (hobby) {
+        const listItem = document.createElement("li");
+        listItem.textContent = hobby;
+
+        const removeButton = document.createElement("button");
+        removeButton.textContent = "Remove";
+        removeButton.style.marginLeft = "10px";
+
+        removeButton.addEventListener("click", function(){
+            listItem.remove();
+        });
+
+        listItem.appendChild(removeButton);
+        hobbyList.appendChild(listItem);
+    });
+});
+
