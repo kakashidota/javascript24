@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="main-title">Welcome to my profile</h1>
+        <h2>Interactive website with javascript</h2>
+        <button id="change-title-button">Change Header</button>
+    </header>
+
+    <main>
+        <section id="profile">
+            <h3>Profile Picture</h3>
+            <img id="profile-pic" src="profilepic.jpg" width="200">
+            <button id="toggle-pic-button">Hide profile picture</button>
+        </section>
+
+        <section id="user-details">
+            <h3>User details</h3>
+            <p>Name: <span id="name">Robin Kamo</span> </p>
+            <p>Age: <span id="age">33</span></p>
+            <p>Hobby: <span id="hobby">Dota2</span></p>
+
+            <h4>Update details:</h4>
+            <form id="update-form">
+                <label for="new-name">Name:</label>
+                <input type="text" id="new-name" placeholder="Enter new name">
+                <br>
+                <label for="new-hobby">Hobby:</label>
+                <input type="text" id="new-hobby" placeholder="Enter new hobby">
+                <br>
+                <button type="button" id="update-details-button">Update details</button>
+            </form>
+        </section>
+
+        <section id="hobby-list-section">
+            <h3>Manage hobbies</h3>
+            <ul id="hobby-list">
+                <li>Gaming</li>
+                <li>Potatis</li>
+            </ul>
+            <h4>Add new hobby:</h4>
+            <input type="text" id="new-hobby-item" placeholder="Enter new hobby">
+            <button id="add-hobby-button">Add hobby</button>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Potatis är nice</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
